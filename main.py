@@ -24,15 +24,12 @@ Denna funktion står för säker inmatning av val för svårihetsgrad
 '''
 def inmat(txt):
     while True:
-                   try:
-                        x = int(input(txt))
-                        if x > 6:
-                            print("ogiltigt välj 1 eller 6")
-                            continue
-                        else:
-                             return x
-                   except ValueError:
-                       print("ogiltigt")
+        x = input(txt)
+        if  len(x) != 4 or not x.isdigit():
+            print("ogiltigt")
+            continue
+        else:
+            return x
 '''
 denn funtion är säker inmatning för gissningar ^^^^^^^. 
 '''
@@ -59,9 +56,20 @@ denna funktion slumpar fram talen till den enkla listan
 '''
 
 
-# UI building.  shisse 
 
 
 
-                   
+# UI building.  shisse
+# kontrol
+print(inmat("skriv din gissning"))   # ska kolla gissnignen)
+# nu har vi fått fram ett rätt svar och ska gämför den med rätt lista från svår relle lätt 
+ex= 1256
+ex2 = 1234
+lol = "lol"
+print(f"drag# {"Drag":>9}  {"Feedback":>18}\n {"-"*35} ")
+for i in range (12,0,-1):
+    
+    # men bara på plats 1 vill jag skriva. 
+    print (f"{i:>3}#    {ex}                    \n")
 
+ 
