@@ -6,23 +6,60 @@ import random
 
 
 # funktionen som väljer svårighets grad. 1(enkel) eller 2(svår) 
-def inmat(txt):
-       while True:
+def inmat_LeS(txt):
+      while True:
                try:
-                    if int(input(txt)) <2:
-                          print("ogiltigt värl 1 eller 2")
-                          continue
-                    elif int(input(txt)) == 1:
+                    x = int(input(txt))
+                    if x > 2:
+                        print("ogiltigt välj 1 eller 2")
+                        continue
+                    elif x == 1:
                           return "1"
-                    elif int(input(txt)) == 2:
+                    elif x == 2:
                           return "2"
                except ValueError:
                    print("ogiltigt")
+'''
+Denna funktion står för säker inmatning av val för svårihetsgrad
+'''
+def inmat(txt):
+    while True:
+                   try:
+                        x = int(input(txt))
+                        if x > 6:
+                            print("ogiltigt välj 1 eller 6")
+                            continue
+                        else:
+                             return x
+                   except ValueError:
+                       print("ogiltigt")
+'''
+denn funtion är säker inmatning för gissningar ^^^^^^^. 
+'''
+def num_svår(): 
+    lst_ut = []
+    for i in range(0,4):
+        lst_ut.append(random.randint(1,6))
+    return lst_ut
+'''
+denna funktion slumpar fram talen till den svåra listan
+'''
+def num_enkel(): # leornado gjorde funktioenn :D   yay 
+      #alt ska köras 4 gånger. 
+    möjliga_tal = [1,2,3,4,5,6]
+    fack_tal = []
+    for i in range(0,4):
+        random.randint(1,len(möjliga_tal))
+        # jag har nu plockat ut ett tal från listan 
+        fack_tal.append(möjliga_tal.pop(random.randint(1,(len(möjliga_tal)-1))))
+      #jag behöver ja poulationen av listan 
+    return fack_tal
+'''
+denna funktion slumpar fram talen till den enkla listan
+'''
 
 
-
-print(inmat("vilken svårighets grad vill du ha "))
-
+# UI building.  shisse 
 
 
 
