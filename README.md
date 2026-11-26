@@ -15,3 +15,5 @@ Viktor vantar mig leonardo och funderar på hur man ska på in  och gämföra i 
 
 
 
+den 26 nov 2026 
+idag har victor och leonardo byggd en massa på UI,en på vårat spel. vi har kommigt en bit och det komemr gå bra. 
