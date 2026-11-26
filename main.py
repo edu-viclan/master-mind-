@@ -2,6 +2,8 @@
 # det svåra ska kunna ha ex 6691 
 # det lätta ska inte kunn ha samm av 2 siftror ex: ej (6691) utan 6712 ( har inte 2 av samma)
 import random 
+tlst = [" "," "," "," "," "," "," "," "," "," "," "," "]
+x = 0
 #✔️✅✔☐
 
 
@@ -55,21 +57,28 @@ def num_enkel(): # leornado gjorde funktioenn :D   yay
 denna funktion slumpar fram talen till den enkla listan
 '''
 
-
-
-
-
-# UI building.  shisse
-# kontrol
-print(inmat("skriv din gissning"))   # ska kolla gissnignen)
+# UI building. 
+# kontrol   # ska kolla gissnignen)
 # nu har vi fått fram ett rätt svar och ska gämför den med rätt lista från svår relle lätt 
-ex= 1256
-ex2 = 1234
-lol = "lol"
-print(f"drag# {"Drag":>9}  {"Feedback":>18}\n {"-"*35} ")
-for i in range (12,0,-1):
+# huvud program yay :D 
+ö = "hahha"
+# haha ska bli till feedbacken 
+if inmat_LeS("välj lätt(1) eller svårt(2)---> ") == 1:
+        slump_tal = num_enkel()
+else:
+        slump_tal = num_svår()
+while True:
+    gissning = inmat("gissa en 4 siffrig komenation tack")
+    tlst[x] = gissning + " " + ö 
     
+    #if gissning == slump_tal:
+
+
+    x+=1
+    print(f"drag# {"Drag":>9}  {"Feedback":>18}\n {"-"*35} ")
+    for i in range (12,0,-1):
     # men bara på plats 1 vill jag skriva. 
-    print (f"{i:>3}#    {ex}                    \n")
+            print (f"{i:>3}#,    {tlst[i-1]}               \n")
+
 
  
